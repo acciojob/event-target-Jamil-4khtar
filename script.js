@@ -33,18 +33,5 @@ class EventTarget {
     
   }
 
-const target = new EventTarget();
-const logHello = () => console.log('hello');
-const logWorld = () => console.log('world');
 
-target.addEventListener('hello', logHello);
-target.addEventListener('world', logWorld);
-
-target.dispatchEvent('hello'); // logs 'hello'
-target.dispatchEvent('world'); // logs 'world'
-
-target.removeEventListener('hello', logHello);
-
-target.dispatchEvent('hello'); // does nothing
-target.dispatchEvent('world'); // logs 'world'
   
